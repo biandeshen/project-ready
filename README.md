@@ -1,5 +1,7 @@
 # Project Readiness Council
 
+[![CI](https://github.com/biandeshen/project-ready/actions/workflows/ci.yml/badge.svg)](https://github.com/biandeshen/project-ready/actions/workflows/ci.yml)
+
 > 一个可执行的工程化基线框架，让 Claude Code 为任何项目建立质量、测试、工具链、CI/CD 等基础规范。
 >
 > **原理：** 多角色 × 多轮次结构化审计 → 决策文档 → 自动生成 CLAUDE.md + 配置文件
@@ -27,16 +29,43 @@
 
 结果是一个 **有标准、有测试、有 CI、有文档**的工程化项目。
 
+```mermaid
+flowchart TD
+    You["你: 运行框架"] --> Scan["Step 0: 扫描项目"]
+    Scan --> Profile["输出项目画像"]
+    Profile --> Confirm{"你确认计划?"}
+    Confirm -- Yes --> Round1["R1: 架构师 - 架构基线"]
+    Confirm -- No --> Adjust["调整后重试"]
+    Round1 --> Round2["R2: 质量官 - 测试策略"]
+    Round1 --> Round3["R3: DevOps - 工具链"]
+    Round2 --> Round5["R5: CI/CD 流水线"]
+    Round3 --> Round4["R4: Git 工作流"]
+    Round1 --> Round7["R7: 开发者体验 - 文档"]
+    Round2 & Round3 & Round4 & Round5 & Round7 --> Zero["清零者: 跨轮次审查"]
+    Zero --> Decide["你: 审阅决策文档"]
+    Decide --> Approve{"批准?"}
+    Approve -- Yes --> Gen["自动生成 CLAUDE.md + 配置"]
+    Gen --> Done["✅ 工程化项目就绪"]
+    Approve -- No --> Revise["修订后重审"]
+```
+
 ---
 
 ## 快速使用
 
-**在目标项目中执行：**
+**安装：**
 
 ```bash
-git clone https://github.com/YOUR_USER/project-readiness-council.git
-cp -r project-readiness-council/src/* /path/to/your-project/.claude/readiness/
-cp project-readiness-council/playbook.md /path/to/your-project/.claude/readiness/
+# 克隆框架
+git clone https://github.com/biandeshen/project-ready.git
+# 安装到目标项目
+bash project-ready/installer/install.sh /path/to/your-project
+```
+
+或者直接从远程安装：
+
+```bash
+bash <(curl -s https://raw.githubusercontent.com/biandeshen/project-ready/main/installer/install.sh) /path/to/your-project
 ```
 
 然后在 Claude Code 中：
