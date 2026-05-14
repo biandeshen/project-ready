@@ -9,7 +9,8 @@ examples/demo-output/outputs/
 .idea/
 *.swp
 *~
-.vscode/
+.vscode/*
+!.vscode/extensions.json
 .deploy/
 
 # Intermediate audit outputs (only READINESS_DECISIONS.md at root is committed)
