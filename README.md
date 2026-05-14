@@ -1,10 +1,13 @@
 # Project Readiness Council
 
+> **管线位置:** Stage 3 — 已有项目 → 工程基线
+> 前驱: design-council (架构蓝图) → 后继: review-playbook (代码审查)
+
 [![CI](https://github.com/biandeshen/project-ready/actions/workflows/ci.yml/badge.svg)](https://github.com/biandeshen/project-ready/actions/workflows/ci.yml)
 
-> 一个可执行的工程化基线框架，让 Claude Code 为任何项目建立质量、测试、工具链、CI/CD 等基础规范。
->
-> **原理：** 多角色 × 多轮次结构化审计 → 决策文档 → 自动生成 CLAUDE.md + 配置文件
+一个可执行的工程化基线框架，让 Claude Code 为任何项目建立质量、测试、工具链、CI/CD 等基础规范。
+
+**原理：** 多角色 × 多轮次结构化审计 → 决策文档 → 自动生成 CLAUDE.md + 配置文件
 
 ---
 
@@ -53,22 +56,16 @@ flowchart TD
 
 ## 快速使用
 
-**安装：**
-
 ```bash
-# 克隆框架
-git clone https://github.com/biandeshen/project-ready.git
-# 安装到目标项目
+# 安装
+git clone https://github.com/playbook-kit/project-ready.git
 bash project-ready/installer/install.sh /path/to/your-project
+
+# 或直接从远程
+bash <(curl -s https://raw.githubusercontent.com/playbook-kit/project-ready/main/installer/install.sh) /path/to/your-project
 ```
 
-或者直接从远程安装：
-
-```bash
-bash <(curl -s https://raw.githubusercontent.com/biandeshen/project-ready/main/installer/install.sh) /path/to/your-project
-```
-
-然后在 Claude Code 中：
+在 Claude Code 中：
 
 ```
 read .claude/readiness/playbook.md and execute it
