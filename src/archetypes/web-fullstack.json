@@ -1,0 +1,19 @@
+{
+  "id": "web-fullstack",
+  "name": "Web Full-Stack Project",
+  "detection": {
+    "requiredFiles": ["package.json"],
+    "optionalFiles": ["tsconfig.json", "next.config.*", "vite.config.*", "webpack.config.*", ".eslintrc*", "tailwind.config.*"],
+    "requiredDependencies": ["react", "vue", "angular", "express", "next", "nuxt", "svelte"],
+    "minScore": 0.6
+  },
+  "recommendations": {
+    "rounds": ["R1", "R2", "R3", "R4", "R5", "R6"],
+    "roles": ["architect", "quality", "devops", "security", "devx"]
+  },
+  "languageDepth": {
+    "typescript": {
+      "checks": ["strict", "noUncheckedIndexedAccess", "exactOptionalPropertyTypes"]
+    }
+  }
+}

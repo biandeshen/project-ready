@@ -1,0 +1,22 @@
+{
+  "id": "ai-project",
+  "name": "AI Project",
+  "detection": {
+    "requiredFiles": [],
+    "optionalFiles": ["requirements.txt", "setup.py", "pyproject.toml", "package.json"],
+    "requiredDependencies": ["openai", "anthropic", "langchain", "transformers", "huggingface-hub", "cohere", "google-generativeai"],
+    "minScore": 0.6
+  },
+  "recommendations": {
+    "rounds": ["R1", "R6", "R7"],
+    "roles": ["architect", "security", "devx"]
+  },
+  "languageDepth": {
+    "python": {
+      "checks": ["mypy-strict", "pytest"]
+    },
+    "typescript": {
+      "checks": ["strict"]
+    }
+  }
+}

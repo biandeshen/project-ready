@@ -1,0 +1,15 @@
+{
+  "id": "quick-script",
+  "name": "Quick Script",
+  "detection": {
+    "requiredFiles": [],
+    "optionalFiles": [],
+    "requiredDependencies": [],
+    "minScore": 0.0
+  },
+  "recommendations": {
+    "rounds": ["R1", "R2"],
+    "roles": ["quality"]
+  },
+  "languageDepth": {}
+}

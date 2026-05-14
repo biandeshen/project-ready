@@ -1,0 +1,19 @@
+{
+  "id": "cli-tool",
+  "name": "CLI Tool",
+  "detection": {
+    "requiredFiles": ["package.json"],
+    "optionalFiles": ["tsconfig.json", ".eslintrc*", "README.md"],
+    "requiredDependencies": ["commander", "yargs", "meow", "oclif", "ink"],
+    "minScore": 0.6
+  },
+  "recommendations": {
+    "rounds": ["R1", "R2", "R3", "R7"],
+    "roles": ["architect", "quality", "devx"]
+  },
+  "languageDepth": {
+    "typescript": {
+      "checks": ["strict", "noUncheckedIndexedAccess"]
+    }
+  }
+}

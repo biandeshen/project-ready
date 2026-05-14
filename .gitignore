@@ -1,0 +1,13 @@
+node_modules/
+dist/
+*.log
+.DS_Store
+ehthumbs.db
+Thumbs.db
+examples/demo-output/debates/
+examples/demo-output/outputs/
+.idea/
+*.swp
+*~
+.vscode/
+.deploy/

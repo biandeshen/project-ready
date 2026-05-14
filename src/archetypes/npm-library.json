@@ -1,0 +1,19 @@
+{
+  "id": "npm-library",
+  "name": "NPM Library",
+  "detection": {
+    "requiredFiles": ["package.json"],
+    "optionalFiles": ["tsconfig.json", ".eslintrc*", "README.md", "LICENSE"],
+    "requiredDependencies": [],
+    "minScore": 0.6
+  },
+  "recommendations": {
+    "rounds": ["R1", "R2", "R3", "R4"],
+    "roles": ["architect", "quality", "devops"]
+  },
+  "languageDepth": {
+    "typescript": {
+      "checks": ["strict", "noUncheckedIndexedAccess", "exactOptionalPropertyTypes"]
+    }
+  }
+}

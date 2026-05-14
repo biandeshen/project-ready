@@ -1,0 +1,19 @@
+{
+  "id": "python-project",
+  "name": "Python Project",
+  "detection": {
+    "requiredFiles": [],
+    "optionalFiles": ["requirements.txt", "setup.py", "setup.cfg", "Pipfile", "pyproject.toml", "MANIFEST.in"],
+    "requiredDependencies": [],
+    "minScore": 0.6
+  },
+  "recommendations": {
+    "rounds": ["R1", "R2", "R3", "R6"],
+    "roles": ["architect", "quality", "security"]
+  },
+  "languageDepth": {
+    "python": {
+      "checks": ["mypy-strict", "black", "pytest"]
+    }
+  }
+}
