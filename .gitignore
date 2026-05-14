@@ -11,3 +11,6 @@ examples/demo-output/outputs/
 *~
 .vscode/
 .deploy/
+
+# Intermediate audit outputs (only READINESS_DECISIONS.md at root is committed)
+outputs/

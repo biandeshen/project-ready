@@ -1,0 +1,16 @@
+{
+  "id": "tooling-project",
+  "name": "Tooling / Documentation Project",
+  "description": "Fallback for projects without standard language manifests.",
+  "detection": {
+    "requiredFiles": [],
+    "optionalFiles": [],
+    "requiredDependencies": [],
+    "minScore": 0.0
+  },
+  "recommendations": {
+    "rounds": ["R1", "R2", "R3", "R4", "R5"],
+    "roles": ["architect", "quality", "devops", "devx"]
+  },
+  "languageDepth": {}
+}
